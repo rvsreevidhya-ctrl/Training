@@ -12,15 +12,15 @@ import httpx
 client = httpx.Client(verify=False)
 # LLM and Embedding setup
 llm = ChatOpenAI(
- base_url="https://genailab.tcs.in",
+ base_url="https://genailab.xx.in",
  model="azure_ai/genailab-maas-DeepSeek-V3-0324",
- api_key="sk-l6I2R7JVJxe-B-rPTmPh0g",
+ api_key="cc",
  http_client=client
 )
 embedding_model = OpenAIEmbeddings(
- base_url="https://genailab.tcs.in",
+ base_url="https://genailab.xx.in",
  model="azure/genailab-maas-text-embedding-3-large",
- api_key="sk-l6I2R7JVJxe-B-rPTmPh0g",
+ api_key="cc",
  http_client=client)
 st.set_page_config(page_title="RAG PDF Summarizer")
 upload_file = st.file_uploader("Upload a PDF", type="pdf")
