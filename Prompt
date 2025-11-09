@@ -1,0 +1,37 @@
+You're building an application inventory management system for a US-based property and casualty insurance company that offers auto and other insurance products. The goal is to create a dynamic front-end interface where users (mainly CIOs) can filter and analyze the technology stack used across various applications, assessing whether the technologies in use are up to date or need attention.
+
+Data Structure:
+
+Application Inventory Table (50 records)
+
+Columns: Application Inventory Number (FK to Technology Table),Application Name, Short Description,CIO Name,Director Name,Technologies Used (List of technologies with versions),Business Disposition, Technology Disposition, Product Line, Additional relevant fields
+
+Technology Table 
+
+Columns: Application Inventory Number (Primary Key),Technology Classification (e.g., Cloud, Data Warehousing, Full Stack, AI, etc.),
+Technology Name((It should match Technologiesused column in Application Inventory with different versions for 50% of records),
+Old Version Number,Stable Version Number,New Version Number
+
+Key Functionality:
+
+Tech Risk Evaluation: For each application, compare the technology versions used with the latest stable versions and categorize them as:
+
+High Risk: If using an outdated version.
+
+Medium Risk: If using a stable but not the latest version.
+
+No Risk: If using the latest version.
+
+Frontend Dashboard (ReactJS + HTML):
+
+Provide filters to select:  CIO Name,Director Name,Department,Application Name,Product Line
+
+Based on the filter selections, generate a report that shows the following columns from the Application Inventory table:
+
+CIO Name,Director Name,Department,Application Name,Product Line,Technology Name,Multiple Technologies with Versions
+
+Additionally, pull in technology risk data from the Technology Table: Old Version Number, Stable Version Number, New Version Number
+
+Display risk status as High, Medium, or Excellent based on version comparison and 
+
+The purpose of this system is to help CIOs quickly understand if their technology stacks are outdated, stable, or up-to-date based on the latest standards, helping in decision-making. Generate technology information data to target distribution: 30% High, 40% Medium, 30% No Risk.Highlight High risk in Red, medium in amber and No risk in Green colour Make the streamlit UI screen more attractive
